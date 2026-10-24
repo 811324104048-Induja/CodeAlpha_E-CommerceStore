@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | NovaMart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="js/api.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/checkout.js" defer></script>
+</head>
+<body class="account-page">
+
+    <div class="announcement">Almost there — let's complete your order.</div>
+
+    <header class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">N</span><span>NOVAMART</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="orders.html">My Orders</a>
+            <a href="profile.html" id="accountLink">My Account</a>
+            <a href="cart.html">Cart <span id="cartCount">0</span></a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <main class="account-main">
+        <div class="page-heading">
+            <p class="eyebrow">SECURE CHECKOUT</p>
+            <h1>Complete your order</h1>
+            <p>Enter your delivery details and review your items.</p>
+        </div>
+
+        <div id="checkoutMessage" class="page-message" role="status" aria-live="polite" hidden></div>
+
+        <form id="checkoutForm" class="checkout-layout">
+            <section class="panel">
+                <h2>Delivery information</h2>
+
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="fullName">Full name</label>
+                        <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email address</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone number</label>
+                        <input id="phone" name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" autocomplete="tel" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="postalCode">PIN code</label>
+                        <input id="postalCode" name="postalCode" type="text" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" autocomplete="postal-code" required>
+                    </div>
+
+                    <div class="form-field full-span">
+                        <label for="address">House / street address</label>
+                        <textarea id="address" name="address" rows="3" autocomplete="street-address" required></textarea>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="city">City</label>
+                        <input id="city" name="city" type="text" autocomplete="address-level2" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="state">State</label>
+                        <input id="state" name="state" type="text" autocomplete="address-level1" required>
+                    </div>
+                </div>
+
+                <div class="checkout-payment-note">
+                    <h3>Payment method</h3>
+                    <p>Payment options will be shown here once payment processing is configured.</p>
+                    <p><strong>Do not enter card details on this page.</strong></p>
+                </div>
+            </section>
+
+            <aside class="panel order-summary">
+                <h2>Your order</h2>
+
+                <div id="checkoutItems">
+                    <p class="loading-text">Loading order summary...</p>
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="checkoutSubtotal">₹0.00</strong>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <strong id="checkoutShipping">Calculated at checkout</strong>
+                </div>
+
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <strong id="checkoutTotal">₹0.00</strong>
+                </div>
+
+                <button id="placeOrderButton" class="btn btn-primary full-width" type="submit">
+                    Place order
+                </button>
+
+                <p class="summary-note">Please verify your address and order before submitting.</p>
+                <a class="back-to-shop" href="cart.html">← Return to cart</a>
+            </aside>
+        </form>
+    </main>
+
+    <footer class="account-footer">
+        <p>© <span id="currentYear"></span> NovaMart. All rights reserved.</p>
+        <a href="shop.html">Continue shopping</a>
+    </footer>
+
+</body>
+</html>

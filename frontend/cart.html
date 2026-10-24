@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | NovaMart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="js/api.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</head>
+<body class="account-page">
+
+    <div class="announcement">Your next favourite is just a few clicks away.</div>
+
+    <header class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">N</span><span>NOVAMART</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="orders.html">My Orders</a>
+            <a href="profile.html" id="accountLink">My Account</a>
+            <a class="active" href="cart.html">Cart <span id="cartCount">0</span></a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <main class="account-main">
+        <div class="page-heading">
+            <p class="eyebrow">YOUR SELECTION</p>
+            <h1>Shopping cart</h1>
+            <p>Review your items before you check out.</p>
+        </div>
+
+        <div id="cartMessage" class="page-message" role="status" aria-live="polite" hidden></div>
+
+        <div class="cart-layout">
+            <section class="panel">
+                <div class="panel-heading">
+                    <h2>Your items</h2>
+                    <a href="shop.html">Continue shopping</a>
+                </div>
+
+                <div id="cartItems">
+                    <p class="loading-text">Loading your cart...</p>
+                </div>
+
+                <div id="emptyCart" class="empty-state" hidden>
+                    <div class="empty-icon">♡</div>
+                    <h2>Your cart is waiting</h2>
+                    <p>You haven't added any products yet.</p>
+                    <a class="btn btn-primary" href="shop.html">Explore products</a>
+                </div>
+            </section>
+
+            <aside class="panel order-summary">
+                <h2>Order summary</h2>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <strong id="cartSubtotal">₹0.00</strong>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <strong id="cartShipping">Calculated at checkout</strong>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <strong id="cartTotal">₹0.00</strong>
+                </div>
+
+                <button id="checkoutButton" class="btn btn-primary full-width" type="button">
+                    Proceed to checkout →
+                </button>
+
+                <p class="summary-note">Your order total will be confirmed before placing the order.</p>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="account-footer">
+        <p>© <span id="currentYear"></span> NovaMart. All rights reserved.</p>
+        <a href="shop.html">Continue shopping</a>
+    </footer>
+
+</body>
+</html>

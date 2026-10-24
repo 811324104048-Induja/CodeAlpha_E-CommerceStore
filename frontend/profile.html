@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account | NovaMart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="js/api.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/profile.js" defer></script>
+</head>
+<body class="account-page">
+
+    <div class="announcement">Your NovaMart account, your way.</div>
+
+    <header class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">N</span><span>NOVAMART</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="orders.html">My Orders</a>
+            <a class="active" href="profile.html" id="accountLink">My Account</a>
+            <a href="cart.html">Cart <span id="cartCount">0</span></a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <main class="account-main">
+        <div class="page-heading">
+            <p class="eyebrow">ACCOUNT SETTINGS</p>
+            <h1>My profile</h1>
+            <p>Manage your personal details and account information.</p>
+        </div>
+
+        <div id="profileMessage" class="page-message" role="status" aria-live="polite" hidden></div>
+
+        <div class="profile-layout">
+            <aside class="panel profile-sidebar">
+                <div class="profile-avatar" id="profileAvatar">N</div>
+                <h2 id="profileDisplayName">NovaMart customer</h2>
+                <p id="profileDisplayEmail">Your account details</p>
+
+                <nav class="profile-menu">
+                    <a class="active" href="profile.html">Personal information</a>
+                    <a href="orders.html">My orders</a>
+                    <a href="cart.html">Shopping cart</a>
+                </nav>
+
+                <button id="logoutButton" class="btn btn-outline full-width" type="button">
+                    Sign out
+                </button>
+            </aside>
+
+            <section class="panel profile-form-panel">
+                <h2>Personal information</h2>
+                <p class="panel-description">Keep your contact details up to date.</p>
+
+                <div id="profileLoading" class="loading-text">
+                    Loading your profile...
+                </div>
+
+                <form id="profileForm" hidden>
+                    <div class="form-grid">
+                        <div class="form-field full-span">
+                            <label for="profileName">Full name</label>
+                            <input
+                                id="profileName"
+                                name="name"
+                                type="text"
+                                autocomplete="name"
+                                minlength="2"
+                                required>
+                        </div>
+
+                        <div class="form-field full-span">
+                            <label for="profileEmail">Email address</label>
+                            <input
+                                id="profileEmail"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                readonly>
+                            <small>Contact support if your email needs to be changed.</small>
+                        </div>
+
+                        <div class="form-field full-span">
+                            <label for="profilePhone">Phone number</label>
+                            <input
+                                id="profilePhone"
+                                name="phone"
+                                type="tel"
+                                autocomplete="tel"
+                                inputmode="numeric"
+                                pattern="[0-9]{10}"
+                                maxlength="10"
+                                required>
+                        </div>
+                    </div>
+
+                    <button
+                        id="saveProfileButton"
+                        class="btn btn-primary"
+                        type="submit">
+                        Save changes →
+                    </button>
+                </form>
+
+                <p class="panel-description">
+                    Your password should never be shared with anyone.
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="account-footer">
+        <p>© <span id="currentYear"></span> NovaMart. All rights reserved.</p>
+        <a href="shop.html">Continue shopping</a>
+    </footer>
+
+</body>
+</html>

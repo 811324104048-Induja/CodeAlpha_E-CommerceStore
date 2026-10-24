@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | NovaMart</title>
+    <meta name="description" content="Explore product details at NovaMart.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/product-details.css">
+
+    <script src="js/api.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/product-details.js" defer></script>
+</head>
+
+<body class="product-details-page">
+
+    <div class="announcement">
+        Discover something you'll love at NovaMart.
+    </div>
+
+    <header class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">N</span>
+            <span>NOVAMART</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="orders.html">My Orders</a>
+            <a href="profile.html" id="accountLink">My Account</a>
+            <a href="cart.html" class="cart-link">
+                Cart <span id="cartCount">0</span>
+            </a>
+        </nav>
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            type="button"
+            aria-label="Toggle navigation">
+            ☰
+        </button>
+    </header>
+
+    <main class="product-details-main">
+
+        <div class="product-breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <a href="shop.html">Shop</a>
+            <span>/</span>
+            <span id="breadcrumbProduct">Product Details</span>
+        </div>
+
+        <div id="productLoading" class="product-status">
+            <div class="loading-spinner"></div>
+            <p>Loading product details...</p>
+        </div>
+
+        <div id="productError" class="product-status" hidden>
+            <h2>Product not found</h2>
+            <p id="productErrorMessage">
+                We couldn't load this product.
+            </p>
+            <a class="btn btn-primary" href="shop.html">
+                Back to shop
+            </a>
+        </div>
+
+        <section id="productDetails" class="product-details-layout" hidden>
+
+            <div class="product-details-image-panel">
+                <div class="product-main-image">
+                    <img
+                        id="detailImage"
+                        src=""
+                        alt=""
+                        hidden>
+
+                    <div id="imagePlaceholder" class="image-placeholder">
+                        <span>Image unavailable</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-details-info">
+
+                <p class="product-details-category" id="detailCategory">
+                    COLLECTION
+                </p>
+
+                <h1 id="detailName">Product name</h1>
+
+                <p class="product-details-price" id="detailPrice">
+                    ₹0
+                </p>
+
+                <div class="product-stock" id="detailStock">
+                    Checking availability...
+                </div>
+
+                <div class="product-description-block">
+                    <h3>Product description</h3>
+                    <p id="detailDescription">
+                        Product description will appear here.
+                    </p>
+                </div>
+
+                <div class="product-quantity">
+                    <label for="quantity">Quantity</label>
+
+                    <div class="quantity-control">
+                        <button
+                            type="button"
+                            id="decreaseQuantity"
+                            aria-label="Decrease quantity">
+                            −
+                        </button>
+
+                        <input
+                            type="number"
+                            id="quantity"
+                            value="1"
+                            min="1"
+                            max="1"
+                            inputmode="numeric"
+                            aria-label="Product quantity">
+
+                        <button
+                            type="button"
+                            id="increaseQuantity"
+                            aria-label="Increase quantity">
+                            +
+                        </button>
+                    </div>
+                </div>
+
+                <button
+                    type="button"
+                    id="addToCartButton"
+                    class="btn btn-primary product-add-button">
+                    Add to Cart
+                    <span aria-hidden="true">→</span>
+                </button>
+
+                <p
+                    id="productMessage"
+                    class="product-message"
+                    role="status"
+                    aria-live="polite"
+                    hidden>
+                </p>
+
+                <div class="product-details-benefits">
+                    <div>
+                        <span class="benefit-icon">✓</span>
+                        <span>Quality products</span>
+                    </div>
+
+                    <div>
+                        <span class="benefit-icon">↻</span>
+                        <span>Order tracking available</span>
+                    </div>
+
+                    <div>
+                        <span class="benefit-icon">♡</span>
+                        <span>Made for everyday living</span>
+                    </div>
+                </div>
+
+                <a href="shop.html" class="back-to-shop">
+                    ← Continue shopping
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>© <span id="currentYear"></span> NovaMart. All rights reserved.</p>
+            <a href="shop.html">Explore the collection</a>
+        </div>
+    </footer>
+
+</body>
+</html>

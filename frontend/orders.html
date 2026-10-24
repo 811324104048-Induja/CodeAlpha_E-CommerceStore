@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | NovaMart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <script src="js/api.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/orders.js" defer></script>
+</head>
+<body class="account-page">
+
+    <div class="announcement">Everything you ordered, all in one place.</div>
+
+    <header class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">N</span><span>NOVAMART</span>
+        </a>
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a class="active" href="orders.html">My Orders</a>
+            <a href="profile.html" id="accountLink">My Account</a>
+            <a href="cart.html">Cart <span id="cartCount">0</span></a>
+        </nav>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <main class="account-main">
+        <div class="page-heading">
+            <p class="eyebrow">YOUR NOVAMART ACTIVITY</p>
+            <h1>My orders</h1>
+            <p>Check your order history and stay up to date with your purchases.</p>
+        </div>
+
+        <div id="ordersMessage" class="page-message" role="status" aria-live="polite" hidden></div>
+
+        <section class="panel">
+            <div class="panel-heading">
+                <h2>Order history</h2>
+                <a href="shop.html">Shop more →</a>
+            </div>
+
+            <div id="ordersLoading" class="loading-text">
+                Loading your orders...
+            </div>
+
+            <div id="ordersList" class="orders-list"></div>
+
+            <div id="ordersEmpty" class="empty-state" hidden>
+                <div class="empty-icon">▤</div>
+                <h2>No orders yet</h2>
+                <p>Your placed orders will appear here.</p>
+                <a class="btn btn-primary" href="shop.html">Start shopping</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="account-footer">
+        <p>© <span id="currentYear"></span> NovaMart. All rights reserved.</p>
+        <a href="profile.html">Manage your account</a>
+    </footer>
+
+</body>
+</html>

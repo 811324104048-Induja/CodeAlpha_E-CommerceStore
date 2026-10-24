@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In | NovaMart</title>
+    <meta name="description" content="Sign in to your NovaMart account.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/auth.css">
+
+    <script src="js/api.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/login.js" defer></script>
+</head>
+
+<body class="auth-page">
+
+    <header class="navbar auth-navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">N</span>
+            <span>NOVAMART</span>
+        </a>
+
+        <a class="auth-back-link" href="index.html">
+            ← Back to home
+        </a>
+    </header>
+
+    <main class="auth-layout">
+
+        <section class="auth-visual">
+            <div class="auth-visual-content">
+                <p class="eyebrow">WELCOME BACK</p>
+
+                <h1>Your next<br>favourite is<br><span>waiting.</span></h1>
+
+                <p class="auth-visual-description">
+                    Sign in to continue exploring the NovaMart
+                    collection and enjoy a seamless shopping experience.
+                </p>
+
+                <div class="auth-visual-bottom">
+                    <span class="auth-visual-line"></span>
+                    <span>Good finds. Everyday essentials.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-form-section">
+            <div class="auth-form-container">
+
+                <p class="auth-mobile-label">NOVAMART</p>
+
+                <p class="eyebrow">YOUR ACCOUNT</p>
+                <h2>Welcome back</h2>
+
+                <p class="auth-subtitle">
+                    New to NovaMart?
+                    <a href="register.html">Create an account</a>
+                </p>
+
+                <div
+                    id="formMessage"
+                    class="form-message"
+                    role="status"
+                    aria-live="polite"
+                    hidden>
+                </div>
+
+                <form id="loginForm">
+
+                    <div class="form-field">
+                        <label for="email">Email address</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="password">Password</label>
+
+                        <div class="password-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required>
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="password-toggle"
+                                aria-label="Show password"
+                                aria-pressed="false">
+                                Show
+                            </button>
+                        </div>
+                    </div>
+
+                    <button
+                        type="submit"
+                        id="loginButton"
+                        class="btn btn-primary auth-submit">
+
+                        Sign in
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                </form>
+
+                <p class="auth-legal">
+                    Your account helps you access your shopping
+                    experience and manage your orders.
+                </p>
+
+                <p class="auth-switch-mobile">
+                    Don't have an account?
+                    <a href="register.html">Sign up</a>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="auth-footer">
+        <p>© <span id="currentYear"></span> NovaMart. All rights reserved.</p>
+        <a href="shop.html">Explore the collection</a>
+    </footer>
+
+</body>
+</html>

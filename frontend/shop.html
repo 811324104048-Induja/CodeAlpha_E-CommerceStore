@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop | NovaMart</title>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">N</span>
+            <span>NOVAMART</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a class="active" href="shop.html">Shop</a>
+        </nav>
+    </header>
+
+    <main class="section">
+        <p class="eyebrow">THE NOVAMART COLLECTION</p>
+
+        <h1>Shop all products.</h1>
+
+        <p class="section-subtitle">
+            Discover your next favourite.
+        </p>
+
+        <p id="shopMessage" class="page-message" hidden></p>
+
+        <div class="product-grid" id="productGrid">
+            <p id="productsLoading">Loading products...</p>
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/shop.js"></script>
+
+</body>
+</html>

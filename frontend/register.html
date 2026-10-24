@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account | NovaMart</title>
+    <meta name="description" content="Create your NovaMart account and discover your next favourite products.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/auth.css">
+
+    <script src="js/api.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/auth.js" defer></script>
+</head>
+
+<body class="auth-page">
+
+    <header class="navbar auth-navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">N</span>
+            <span>NOVAMART</span>
+        </a>
+
+        <a class="auth-back-link" href="index.html">
+            ← Back to home
+        </a>
+    </header>
+
+    <main class="auth-layout">
+
+        <section class="auth-visual">
+            <div class="auth-visual-content">
+                <p class="eyebrow">WELCOME TO NOVAMART</p>
+
+                <h1>Good things<br>are worth<br><span>discovering.</span></h1>
+
+                <p class="auth-visual-description">
+                    Create your account and discover products
+                    picked for your everyday life.
+                </p>
+
+                <div class="auth-visual-bottom">
+                    <span class="auth-visual-line"></span>
+                    <span>A little something for everyone.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="auth-form-section">
+            <div class="auth-form-container">
+
+                <p class="auth-mobile-label">NOVAMART</p>
+
+                <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+                <h2>Create your account</h2>
+
+                <p class="auth-subtitle">
+                    Already have an account?
+                    <a href="login.html">Sign in</a>
+                </p>
+
+                <div id="formMessage"
+                     class="form-message"
+                     role="status"
+                     aria-live="polite"
+                     hidden></div>
+
+                <form id="registerForm">
+
+                    <div class="form-field">
+                        <label for="name">Full name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            minlength="2"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="you@example.com"
+                            autocomplete="email"
+                            required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">Phone number</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            autocomplete="tel"
+                            pattern="[0-9]{10}"
+                            maxlength="10"
+                            inputmode="numeric"
+                            required>
+                        <small>Enter your 10-digit mobile number.</small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="password">Password</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Create a password"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required>
+                        <small>Use at least 8 characters.</small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="confirmPassword">Confirm password</label>
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Enter your password again"
+                            autocomplete="new-password"
+                            minlength="8"
+                            required>
+                    </div>
+
+                    <label class="auth-checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <span>
+                            I agree to the terms and conditions.
+                        </span>
+                    </label>
+
+                    <button type="submit"
+                            id="registerButton"
+                            class="btn btn-primary auth-submit">
+                        Create account
+                        <span aria-hidden="true">→</span>
+                    </button>
+
+                </form>
+
+                <p class="auth-legal">
+                    By creating an account, you agree to use
+                    NovaMart responsibly.
+                </p>
+
+                <p class="auth-switch-mobile">
+                    Already a member?
+                    <a href="login.html">Sign in</a>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="auth-footer">
+        <p>© <span id="currentYear"></span> NovaMart. All rights reserved.</p>
+        <a href="shop.html">Explore the collection</a>
+    </footer>
+
+</body>
+</html>

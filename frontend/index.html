@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NovaMart — Discover better. Shop smarter.">
+    <title>NovaMart | Discover Better</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/landing.css">
+
+    <script src="js/api.js" defer></script>
+    <script src="js/common.js" defer></script>
+    <script src="js/landing.js" defer></script>
+</head>
+<body>
+
+    <!-- Announcement -->
+    <div class="announcement">
+        <p>YOUR NEXT FAVOURITE FIND IS HERE</p>
+        <a href="shop.html">Explore the collection ↗</a>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a class="brand" href="index.html">
+            <span class="brand-icon">N</span>
+            <span>NOVA<span class="brand-light">MART</span></span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a class="active" href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="#categories">Categories</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a class="nav-icon" href="shop.html" aria-label="Search products">⌕</a>
+            <a class="nav-icon cart-link" href="cart.html" aria-label="Shopping cart">
+                ♧ <span class="cart-count" id="cartCount">0</span>
+            </a>
+            <a class="login-link" id="accountLink" href="login.html">Sign in ↗</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="eyebrow">
+                    <span class="eyebrow-line"></span>
+                    THE EVERYDAY EDIT
+                </div>
+
+                <h1>Find your<br>next <span>favourite.</span></h1>
+
+                <p class="hero-description">
+                    Thoughtfully picked essentials, everyday upgrades,
+                    and little things that make a big difference.
+                </p>
+
+                <div class="hero-buttons">
+                    <a class="button button-dark" href="shop.html">
+                        Explore the shop <span>↗</span>
+                    </a>
+                    <a class="text-link" href="#categories">Discover categories ↓</a>
+                </div>
+
+                <div class="hero-proof">
+                    <div class="proof-avatars">
+                        <span>N</span><span>M</span><span>S</span>
+                    </div>
+                    <div>
+                        <strong>Your next great find awaits.</strong>
+                        <p>Explore products picked for everyday life.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-image-frame">
+                    <img
+                        src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1100&q=85"
+                        alt="Curated everyday fashion and lifestyle collection"
+                    >
+                </div>
+
+                <div class="floating-card floating-top">
+                    <span class="floating-icon">✳</span>
+                    <div>
+                        <strong>Good finds.</strong>
+                        <p>Better everyday living.</p>
+                    </div>
+                </div>
+
+                <a href="shop.html" class="floating-card floating-bottom">
+                    <span class="mini-arrow">↗</span>
+                    <div>
+                        <strong>Explore something new</strong>
+                        <p>Find your next favourite</p>
+                    </div>
+                </a>
+
+                <span class="hero-decoration">N° 01</span>
+            </div>
+        </section>
+
+        <!-- Benefits -->
+        <section class="benefits">
+            <div class="benefit">
+                <span>✳</span>
+                <div><strong>Curated collections</strong><p>Find things worth keeping</p></div>
+            </div>
+            <div class="benefit">
+                <span>◇</span>
+                <div><strong>Everyday essentials</strong><p>Style meets functionality</p></div>
+            </div>
+            <div class="benefit">
+                <span>↗</span>
+                <div><strong>Simple shopping</strong><p>A smoother way to shop</p></div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section class="section categories-section" id="categories">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">A WORLD OF GOOD FINDS</p>
+                    <h2>Shop by <span>category.</span></h2>
+                </div>
+                <a href="shop.html" class="text-link">View all products ↗</a>
+            </div>
+
+            <div class="category-grid">
+                <a href="shop.html?category=Electronics" class="category-card category-electronics">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80" alt="Headphones and electronics" loading="lazy">
+                    <div class="category-overlay">
+                        <span>01 / TECH</span>
+                        <h3>Electronics</h3>
+                        <p>Upgrade your everyday ↗</p>
+                    </div>
+                </a>
+
+                <a href="shop.html?category=Accessories" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80" alt="Minimal wristwatch accessories" loading="lazy">
+                    <div class="category-overlay">
+                        <span>02 / DETAILS</span>
+                        <h3>Accessories</h3>
+                        <p>The finishing touches ↗</p>
+                    </div>
+                </a>
+
+                <a href="shop.html?category=Fashion" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=700&q=80" alt="Fashion collection" loading="lazy">
+                    <div class="category-overlay">
+                        <span>03 / STYLE</span>
+                        <h3>Fashion</h3>
+                        <p>Make it your own ↗</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured products -->
+        <section class="section featured-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">HANDPICKED FOR YOU</p>
+                    <h2>Good things, <span>right here.</span></h2>
+                    <p class="section-subtitle">Take a look at some of our latest finds.</p>
+                </div>
+                <a href="shop.html" class="text-link">Shop everything ↗</a>
+            </div>
+
+            <div class="product-grid" id="featuredProducts">
+                <div class="loading-state">Discovering your next favourites...</div>
+            </div>
+        </section>
+
+        <!-- Promotional banner -->
+        <section class="promo-section" id="about">
+            <div class="promo-copy">
+                <p class="eyebrow">A LITTLE SOMETHING DIFFERENT</p>
+                <h2>Less scrolling.<br>More <span>finding.</span></h2>
+                <p>
+                    From useful everyday upgrades to pieces that
+                    simply make you smile — your next favourite is waiting.
+                </p>
+                <a href="shop.html" class="button button-light">Find your favourite ↗</a>
+            </div>
+
+            <div class="promo-image">
+                <img
+                    src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=85"
+                    alt="A thoughtfully curated retail collection"
+                    loading="lazy"
+                >
+                <span class="promo-stamp">THE NOVA<br>EDIT ✳</span>
+            </div>
+        </section>
+
+        <!-- Newsletter-style call to action -->
+        <section class="closing-section">
+            <p class="eyebrow">YOUR NEXT DISCOVERY STARTS HERE</p>
+            <h2>Something good is<br><span>just a click away.</span></h2>
+            <a href="shop.html" class="button button-dark">Start exploring ↗</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a class="brand brand-footer" href="index.html">
+                    <span class="brand-icon">N</span>
+                    <span>NOVA<span class="brand-light">MART</span></span>
+                </a>
+                <p>Discover better. Shop smarter.<br>Little things, better everyday.</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Explore</h4>
+                <a href="shop.html">All products</a>
+                <a href="shop.html?category=Electronics">Electronics</a>
+                <a href="shop.html?category=Accessories">Accessories</a>
+                <a href="shop.html?category=Fashion">Fashion</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Your account</h4>
+                <a href="login.html">Sign in</a>
+                <a href="register.html">Create account</a>
+                <a href="orders.html">My orders</a>
+                <a href="cart.html">Shopping cart</a>
+            </div>
+
+            <div class="footer-column">
+                <h4>Need help?</h4>
+                <a href="mailto:support@novamart.example">Contact us</a>
+                <p>We're here to help you shop better.</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="currentYear"></span> NovaMart. All rights reserved.</p>
+            <p>Made for your everyday ✳</p>
+        </div>
+    </footer>
+
+</body>
+</html>
